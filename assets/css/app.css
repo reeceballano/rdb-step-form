@@ -1,0 +1,31 @@
+.rdb-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    text-transform: capitalize !important;
+}
+
+.rdb-form ::-moz-placeholder { /* Firefox 19+ */
+    text-transform: capitalize !important;
+}
+.rdb-form :-ms-input-placeholder { /* IE 10+ */
+    text-transform: capitalize !important;
+}
+.rdb-form :-moz-placeholder { /* Firefox 18- */
+    text-transform: capitalize !important;
+}
+
+.rdb-form {
+    text-align: center;
+}
+
+.rdb-form h3 {
+    margin-top: 21px;
+    font-size: 22px;
+}
+
+.rdb-form input[type=email]:focus,
+.rdb-form input[type=text]:focus {
+    outline: none;
+}
+
+.error-input {
+    border-color: red !important;
+}
