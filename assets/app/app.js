@@ -17,7 +17,7 @@
             return {
                 formId: 0,
                 appForm: document.getElementById('app'),
-                url: `http://wp54.test/wp-json/contact-form-7/v1/contact-forms/`,
+                url: `${window.location.origin}/wp-json/contact-form-7/v1/contact-forms/`,
                 title: '',
                 inputValue: '',
                 inputLabel: '',
