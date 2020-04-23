@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: rdb Step Form
+Plugin Name: RDB Step Form
 Plugin URI: https://www.facebook.com/rdbwebdev
-Description: Form 
+Description: A step form plugin for Wordpress. 
 Version: 1.0.0
 Author: Reece
 Author URI: https://www.facebook.com/rdbwebdev
