@@ -17,7 +17,8 @@
 }
 
 .rdb-form h3 {
-    margin-top: 21px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
     font-size: 22px;
 }
 

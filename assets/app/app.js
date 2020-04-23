@@ -7,7 +7,9 @@
                         <form@submit.prevent="checkStep" class="rdb-form">\
                             <input v-if="!hideForm" v-model="inputValue" ref="regInput" :type="inputType" :placeholder="inputLabel"/>\
                             <span v-else ><input type="submit" value="Send" @click.prevent="submitForm" />\
-                            <h3>Click the Send Button</h3>\
+                            <h3 v-if="!isSending">Click the Send Button</h3>\
+                            <h3 v-if="isSending">Sending...</h3>\
+                            <h3 v-if="hasError">There\'s an error. Please try again later!</h3>\
                             </span>\
                         </form>\
                     </div>',
@@ -22,6 +24,8 @@
                 inputType: '',
                 position: 0,
                 hideForm: false,
+                isSending: false,
+                hasError: false,
                 collectedData: {
                     name: '',
                     email: '',
@@ -152,6 +156,7 @@
 
             submitForm() {
                 console.log('sending form');
+                this.isSending = true;
 
                 // Create new instance
                 let bodyFormData = new FormData();
@@ -170,8 +175,15 @@
                 // Send form
                 fetch(`${this.url}${this.formId}/feedback`, params)
                         .then( response => response.json())
-                        .then( data => console.log('Success:', data.status))
-                        .catch(error => console.log('Error:', error));
+                        .then( (data) => {
+                            console.log('Success:', data.status);
+                            this.isSending = false;
+                        })
+                        .catch(error => {
+                            console.log('Error:', error);
+                            this.isSending = false;
+                            this.hasError = true;
+                        });
 
             }
         }
