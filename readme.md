@@ -2,6 +2,8 @@
 
 A step form plugin for Wordpress.
 
+<img src="https://github.com/reeceballano/rdb-step-form/blob/master/assets/img/rdb-step-form.gif" />
+
 ## Requirements
 - Contact Form 7 installed (CF7)
    You need a "contact form 7" installed on your WP site in order to run this plugin.
